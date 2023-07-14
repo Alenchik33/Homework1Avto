@@ -2,7 +2,7 @@ package ru.netology.service;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class CashbackHackServiceTest {
 
@@ -11,13 +11,13 @@ public class CashbackHackServiceTest {
     @Test
     public void AmountAbove1000() {
         assertEquals(service.remain(1100), 900);
-    }
 
+    }
     @Test
     public void AmountLess1000() {
-        assertEquals(service.remain(900),100);
-    }
+        assertEquals(service.remain(900), 100);
 
+    }
     @Test
     public void Amount0() {
         assertEquals(service.remain(0), 1000);
